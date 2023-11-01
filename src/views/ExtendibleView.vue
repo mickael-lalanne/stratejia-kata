@@ -1,10 +1,7 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <main>
-    <div>
-        Extendible view.
-    </div>
-  </main>
+    <main>
+        <div>Extendible view.</div>
+    </main>
 </template>
