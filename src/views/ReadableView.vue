@@ -102,7 +102,7 @@ export default {
 
                         if (isSuffixInDictionnary) {
                             wordSuffixes.push(potentialSuffix);
-                    }
+                        }
                     }
                 }
 
@@ -141,5 +141,6 @@ export default {
 <style scoped>
 .words-container {
     max-width: 20vw;
+    white-space: pre-line;
 }
 </style>
