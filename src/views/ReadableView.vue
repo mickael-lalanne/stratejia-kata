@@ -3,7 +3,7 @@
         <div>Readable view.</div>
         <div>All combinations :</div>
         <div class="words-container">
-            {{ allCombinations }}
+            {{ formatedCombinations }}
         </div>
     </main>
 </template>
@@ -20,6 +20,11 @@ export default {
             dictionnaryWords: [] as string[],
             allCombinations: [] as string[]
         };
+    },
+    computed: {
+        formatedCombinations() {
+            return this.allCombinations.join('\n');
+        }
     },
     async beforeMount() {
         this.dictionnaryWords = await getDictionnaryWords();
