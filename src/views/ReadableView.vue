@@ -83,14 +83,21 @@ export default {
             return new Promise((resolve) => {
                 const wordSuffixes: string [] = [];
 
-                for (let index = 0; index < sixLettersWord.length - WORD_MIN_SIZE; index++) {
-                    const potentialSuffix: string = sixLettersWord.substring(1, index + 1 + WORD_MIN_SIZE);
+                // Loop through all the characters contained in the word
+                // with this loop we have access to basic suffixes
+                // Ex for "albums" => "lb", "lbu", "lbum", "lbums" 
+                for (let i = 0; i < sixLettersWord.length - WORD_MIN_SIZE; i++) {
+                    // But we need a second loop to check all possibilities
+                    // Ex for "albums" => "bu", "bum", "bums", "um", "ums", ...
+                    for (let j = 1; j < sixLettersWord.length - WORD_MIN_SIZE; j++) {  
+                        const potentialSuffix: string = sixLettersWord.substring(j, i + 1 + WORD_MIN_SIZE);
 
-                    // Check if the suffix is a real word
-                    const isSuffixInDictionnary: boolean = this.dictionnaryWords.includes(potentialSuffix);
+                        // Check if the suffix is a real word
+                        const isSuffixInDictionnary: boolean = this.dictionnaryWords.includes(potentialSuffix);
 
-                    if (isSuffixInDictionnary) {
-                        wordSuffixes.push(potentialSuffix);
+                        if (isSuffixInDictionnary) {
+                            wordSuffixes.push(potentialSuffix);
+                    }
                     }
                 }
 
