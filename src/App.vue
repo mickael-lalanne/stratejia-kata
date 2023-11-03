@@ -18,14 +18,18 @@ import { RouterView } from 'vue-router';
 </template>
 
 <style scoped>
+body {
+    background-color: #354344;
+}
 header {
+    justify-content: center;
     line-height: 1.5;
     max-height: 100vh;
 }
 
 .logo {
     display: block;
-    margin: 0 auto 2rem;
+    margin: auto;
 }
 
 nav {
@@ -57,11 +61,6 @@ nav a:first-of-type {
     header {
         display: flex;
         place-items: center;
-        padding-right: calc(var(--section-gap) / 2);
-    }
-
-    .logo {
-        margin: 0 2rem 0 0;
     }
 
     header .wrapper {
@@ -78,5 +77,10 @@ nav a:first-of-type {
         padding: 1rem 0;
         margin-top: 1rem;
     }
+}
+</style>
+<style>
+html {
+    overflow: auto !important;
 }
 </style>

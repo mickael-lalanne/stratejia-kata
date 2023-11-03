@@ -1,6 +1,6 @@
 <template>
     <main>
-        <div class="title my-10">Extendible view.</div>
+        <div class="title mb-10">Extendible view.</div>
 
         <div class="d-flex align-center">
             <div>
@@ -98,11 +98,15 @@ export default {
 .title {
     text-align: center;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 30px;
+    color: white;
 }
 .words-container {
     max-width: 20vw;
     white-space: pre-line;
+}
+.completed-section {
+    color: white;
 }
 
 .completed-step {
