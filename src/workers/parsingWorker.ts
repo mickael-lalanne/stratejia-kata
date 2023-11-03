@@ -96,7 +96,7 @@ const findAllPrefixes = function (sixLettersWord: string): Promise<string[]> {
             const isPrefixInDictionnary: boolean =
                 dictionnaryWords.includes(potentialPrefix);
 
-            if (isPrefixInDictionnary) {
+            if (isPrefixInDictionnary && potentialPrefix.length > 1) {
                 wordPrefixes.push(potentialPrefix);
             }
         }
@@ -129,7 +129,7 @@ const findAllSuffixes = function (sixLettersWord: string): Promise<string[]> {
                 const isSuffixInDictionnary: boolean =
                     dictionnaryWords.includes(potentialSuffix);
 
-                if (isSuffixInDictionnary) {
+                if (isSuffixInDictionnary && potentialSuffix.length > 1) {
                     wordSuffixes.push(potentialSuffix);
                 }
             }
