@@ -1,46 +1,104 @@
-# stratejia-kata
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a name="readme-top"></a>
 
-This template should help get you started developing with Vue 3 in Vite.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+    <img src="src/assets/logo.svg" alt="Logo" width="80" height="80">
 
-## Recommended IDE Setup
+  <h3 align="center">Mickaël Lalanne</h3>
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+  <p align="center">
+    Kata for <a href="https://www.stratejia.ca/" target="_blank">Stratejia</a>
+  </p>
+</div>
 
-## Type Support for `.vue` Imports in TS
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+<!-- ABOUT THE PROJECT -->
+## About the project
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+Exercise based on [Kata08: Conflicting Objectives](http://codekata.com/kata/kata08-conflicting-objectives/). <br>
+Objective : code a program to process a dictionary file and look for all six letter words which are composed of two concatenated smaller words.
 
-1. Disable the built-in TypeScript Extension
-    1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Customize configuration
+### Built With
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+* [![Vue][Vue.js]][Vue-url]
+* [![Typescript][Typescript]][Typescript-url]
+* [![Vuetify][Vuetify.js]][Vuetify-url]
 
-## Project Setup
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```sh
-npm install
-```
+<!-- GETTING STARTED -->
+## Getting Started
 
-### Compile and Hot-Reload for Development
+### Prerequisites
 
-```sh
-npm run dev
-```
+* [Nodejs](https://nodejs.org/en)
 
-### Type-Check, Compile and Minify for Production
+### Installation
 
-```sh
-npm run build
-```
+1. Clone the repo
+   ```sh
+   git clone https://github.com/mickael-lalanne/stratejia-kata.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+2. Launch the project locally
+   ```sh
+   npm run dev
+   ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```sh
-npm run test:unit
-```
+<!-- CONTACT -->
+## Contact
+
+Mickaël Lalanne - mickael.lalanne03@gmail.com
+
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+* [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/mickael-lalanne/
+[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
+[Vue-url]: https://vuejs.org/
+[Vuetify.js]: https://img.shields.io/static/v1?style=for-the-badge&message=Vuetify&color=1867C0&logo=Vuetify&logoColor=FFFFFF&label
+[Vuetify-url]: https://vuetifyjs.com/en/
+[Typescript]: https://img.shields.io/static/v1?style=for-the-badge&message=TypeScript&color=3178C6&logo=TypeScript&logoColor=FFFFFF&label=
+[Typescript-url]: https://www.typescriptlang.org/
