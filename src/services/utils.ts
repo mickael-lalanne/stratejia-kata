@@ -23,7 +23,13 @@ export async function getDictionnaryWords(filePath: string = 'wordlist.txt'): Pr
 
 export enum EParsingState {
     ReadingFile = 'Retrieving dictionnary words from wordlist.txt file...',
+    AnalyzingPrefixesAndSuffixes = 'Analyzing potential prefixes and suffixes...',
     SearchingCombinations = 'Searching for combinations...',
     Complete = 'Parsing completed :)',
-    Error = 'An error has occured :( Please try again.'
+    Error = 'An error has occured :( Please try again.',
+    FirstCombinationFound = 'First combination found ! Looking for others...'
+}
+
+export enum EParsingWorkerMessage {
+    Parse = 'parse'
 }

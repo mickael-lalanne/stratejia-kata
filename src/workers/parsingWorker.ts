@@ -3,11 +3,14 @@ import { EParsingState, getDictionnaryWords } from '@/services/utils';
 const WORD_MIN_SIZE: number = 2;
 let dictionnaryWords: string[] = [];
 let allCombinations: string[] = [];
+let firstCombinationFound: boolean = false;
 
 // Listen for main to start dictionnary parsing
-onmessage = async function (e) {
+onmessage = async function (message) {
     // Read wordlist.txt file to get all words
     dictionnaryWords = await getDictionnaryWords('../../wordlist.txt');
+
+    postMessage({ state: EParsingState.AnalyzingPrefixesAndSuffixes });
 
     // Parse words and check for combinations
     parseDictionnaryWords();
@@ -56,8 +59,6 @@ const getWordCombinations = async function (
             findAllSuffixes(sixLettersWord),
         ])
             .then((results) => {
-                // postMessage({ state: EParsingState.SearchingCombinations});
-
                 // Once we got all the prefixes and suffixes, check for combinations
                 const wordPrefixes = results[0];
                 const wordSuffixes = results[1];
@@ -162,6 +163,12 @@ const findForCombinations = function (
                 !allCombinations.includes(formatedCombination)
             ) {
                 allCombinations.push(formatedCombination);
+
+                // If it isn't already, notify main a combination has been found
+                if (!firstCombinationFound) {
+                    postMessage({ state: EParsingState.FirstCombinationFound});
+                    firstCombinationFound = true;
+                }
             }
         });
     });
