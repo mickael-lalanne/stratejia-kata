@@ -28,8 +28,6 @@
             ></v-progress-circular>
         </div>
 
-
-
         <!-- COMPLETED SECTION -->
         <div
             v-if="parsingState === EParsingState.Complete"
@@ -55,8 +53,6 @@ export default {
             allCombinations: [] as string[],
             parsingState: EParsingState.ReadingFile as EParsingState,
             parsingWorker: new Worker() as Worker,
-            sixLettersWordsNumber: 0 as number,
-            analyzedWordsNumber: 0 as number,
             completedSteps: [] as EParsingState[]
         };
     },
@@ -79,11 +75,6 @@ export default {
             if (this.parsingState === EParsingState.Complete) {
                 this.allCombinations = e.data.combinations;
                 this.completedSteps.push(EParsingState.Complete);
-            }
-
-            if (this.parsingState === EParsingState.SearchingCombinations) {
-                this.sixLettersWordsNumber = e.data.sixLettersWordsNumber;
-                this.analyzedWordsNumber = e.data.analyzedWordsNumber;
             }
         };
     },

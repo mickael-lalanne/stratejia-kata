@@ -26,6 +26,7 @@ export default {
             return this.allCombinations.join('\n');
         }
     },
+    // Called right before the component is to be mounted
     async beforeMount() {
         this.dictionnaryWords = await getDictionnaryWords();
 
@@ -65,6 +66,7 @@ export default {
             return new Promise((resolve) => {
                 const wordPrefixes: string [] = [];
 
+                // Loop through all the characters contained in the word (except the last two)
                 for (let index = 0; index < sixLettersWord.length - WORD_MIN_SIZE; index++) {
                     const potentialPrefix: string = sixLettersWord.substring(0, index + WORD_MIN_SIZE);
 
